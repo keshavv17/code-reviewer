@@ -11,6 +11,7 @@ async function generateContent(prompt) {
     },
   });
   console.log(response.text);
+  return response.text;
 }
 
 module.exports = generateContent
