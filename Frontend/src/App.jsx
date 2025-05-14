@@ -3,6 +3,7 @@ import "prismjs/themes/prism-tomorrow.css"
 import prism from "prismjs"
 import Editor from "react-simple-code-editor"
 import axios from 'axios'
+import Markdown from 'react-markdown'
 import './App.css'
 
 
@@ -39,18 +40,15 @@ function App() {
                 width: "100%"
               }}
             />
-            <pre>
-              <code className="language-javascript">
-                {`function sum() {return 1+1}`}
-              </code>
-            </pre>
           </div>
           <div
             onClick={reviewCode}
             className="button">Review</div>
         </div>
         <div className="right">
-          {review}
+          <Markdown>
+            {review}
+          </Markdown>
         </div>
       </main>
     </>
